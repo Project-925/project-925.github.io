@@ -14,13 +14,6 @@ nav ul li, footer ul li {
     margin-right: 20px;
 }
 
-.move-me {
-  position: relative;
-  top: 54px;
-  left: 55px;
-  border: 3px solid #73AD21;     
-}
-
 
 
 
@@ -37,7 +30,9 @@ a {
 a:hover {
     text-decoration: underline;
 }
-h1 {
+
+
+/*h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
@@ -45,17 +40,14 @@ p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
+}*/
 
-ul.posts { 
+
+/*ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
 }
 
 ul.posts li {
     list-style: none;
-}
+}*/
