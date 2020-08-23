@@ -15,14 +15,27 @@ div.centered {
   transform: translate(-50%, -50%);
 }
 
+div.fstPage {
+    background-image:url("https://user-images.githubusercontent.com/52555584/87888597-9b172a80-c9e2-11ea-9a13-cb0248ea7bef.jpg");
+    /*background-color: lightgray;*/
+    height: 573px;
+    width: 447px;
+    background-size:cover;
+}
+
 </style>
 </head>
 <body>
 
-<div class="fixed"><div class="centered">
-  <img src="https://user-images.githubusercontent.com/52555584/87888597-9b172a80-c9e2-11ea-9a13-cb0248ea7bef.jpg"  width="447" height="573" >
-  </div>
+
+<div class="fixed">
+<div class="centered">
+<div class="fstPage">
 </div>
+</div>
+</div>
+
+
 
 
 
