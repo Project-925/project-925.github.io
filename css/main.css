@@ -1,3 +1,6 @@
+<html>
+<head>
+<style>
 div.fixed {
   position: fixed;
   top: 80px;
@@ -12,10 +15,20 @@ div.centered {
   transform: translate(-50%, -50%);
 }
 
+</style>
+</head>
+<body>
+
+<div class="fixed"><div class="centered">
+  <img src="https://user-images.githubusercontent.com/52555584/87888597-9b172a80-c9e2-11ea-9a13-cb0248ea7bef.jpg"  width="447" height="573" >
+  </div>
+</div>
 
 
 
-body {
+
+
+/* body {
     margin: 4px auto;
     width: 95%;
 }
@@ -28,16 +41,13 @@ nav ul, footer ul {
 
 nav ul li, footer ul li {
     /*display: inline;*/
-    margin-right: 20px;
+/*    margin-right: 20px;
 }
 
 
 
 
-<div class="fixed"><div class="centered">
-  <img src="https://user-images.githubusercontent.com/52555584/87888597-9b172a80-c9e2-11ea-9a13-cb0248ea7bef.jpg"  width="447" height="573" >
-  </div>
-</div>
+
 
 
 
