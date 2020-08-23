@@ -1,3 +1,8 @@
+div.static {
+  position: static;
+  text-align: center;
+}
+
 body {
     margin: 4px auto;
     width: 95%;
@@ -17,7 +22,9 @@ nav ul li, footer ul li {
 
 
 
-
+<div class="static">
+  <img src="https://user-images.githubusercontent.com/52555584/87888597-9b172a80-c9e2-11ea-9a13-cb0248ea7bef.jpg"  width="447" height="573" >
+</div>
 
 
 
