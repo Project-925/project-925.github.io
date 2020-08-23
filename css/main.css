@@ -1,7 +1,23 @@
-div.static {
-  position: static;
+div.absolute {
+  position: absolute;
+  top: 80px;
+
+  width: 447px;
+  height: 573px;
   text-align: center;
 }
+
+div.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+
+
+
 
 body {
     margin: 4px auto;
@@ -22,10 +38,10 @@ nav ul li, footer ul li {
 
 
 
-<div class="static">
+<div class="absolute"><div class="centered">
   <img src="https://user-images.githubusercontent.com/52555584/87888597-9b172a80-c9e2-11ea-9a13-cb0248ea7bef.jpg"  width="447" height="573" >
+  </div>
 </div>
-
 
 
 
