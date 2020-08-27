@@ -1,37 +1,86 @@
  <!DOCTYPE html>
 	<html>
 	<style>
-div.absolute {
-  position: fixed;
-  top: 20%;
-  left: 30%;
-   transform: translate(-50%, -50%);
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+#myImg {
+
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-div.absolute2 {
-  position: fixed;
-  top: 300px;
-  left: 60%;
+#myImg:hover {opacity: 0.7;}
+
+#myImg1 {
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg1:hover {opacity: 0.7;}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
 }
 
 
-img {
-  object-fit: cover;
-  width:146px;
-  height:98px;
-}
 
-
-
-div.fixed {
-  position: fixed;
-  
-  top: 250px;
-  left: 50%;
-
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-}
 
 
 
@@ -55,6 +104,34 @@ a:hover {
   color: #e2efd1;
 }
 
+div.absolute {
+  position: fixed;
+  top: 30%;
+  left: 30%;
+
+}
+
+div.absolute2 {
+  position: fixed;
+  top: 30%;
+  left: 70%;
+}
+
+
+
+
+
+div.fixed {
+  position: fixed;
+  
+  top: 250px;
+  left: 50%;
+
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+
 
 .inheritall {
 all:unset
@@ -67,7 +144,7 @@ all:unset
 			<nav>
 	    		<ul>
 	        		
-                    
+                 
                     
                     
                     <p align="center"><a href="/9.3">9.3 – Suit up and Suck up</a>   
@@ -147,20 +224,28 @@ all:unset
 	        		<p align = "center">
                     <a href="https://project-925.github.io/">home</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                 	</p> 
-            
-                    
-                    
-                	
-                
-             
+                 
+                   
 
-			<div class="absolute">
-            <img src="https://user-images.githubusercontent.com/52555584/90973571-11261a00-e4d8-11ea-8bf0-5de16873ee5c.jpg"  ></div>
+
+         
+
+                 <div class="absolute"> <img id="myImg" src="https://user-images.githubusercontent.com/52555584/90973571-11261a00-e4d8-11ea-8bf0-5de16873ee5c.jpg"  style="height: 10%; width:10%;max-width:300px"> </div>
+                 
+			
+
+ <div class="absolute2"> <img id="myImg1" src="https://user-images.githubusercontent.com/52555584/91362168-c5f95900-e7ae-11ea-9b93-4aec927887e4.jpg"  style="height: 10%; width:10%;max-width:300px"> </div>
+		
+
+
+
+
+
+
+
             
-            <div class="absolute2">
-            <img src="https://user-images.githubusercontent.com/52555584/91362168-c5f95900-e7ae-11ea-9b93-4aec927887e4.jpg"  ></div>
-            
-            
+                	
+
             <div class="fixed">
             <p><center> <h1 >925 to Survive</h1>    </center>
 		  
@@ -196,13 +281,70 @@ all:unset
               press repeat
                     <br>
               </p>
+                
+             
 </div>
 	    		</ul>
 			</nav>
+            
+            
+            
+            
+            
 			
-			
-			 
-			
+			<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+
+
+			<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+var img = document.getElementById("myImg1");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+
+
+			<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+
+
 			
 		</body>
 	</html>
