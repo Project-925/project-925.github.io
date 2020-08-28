@@ -26,14 +26,15 @@
 
 #myImg2:hover {opacity: 0.1;}
 
-
+#myImg3 {}
 #myImg3:hover {opacity: 0.1;}
 
-#myImg3 {
-
-  
-
-}
+#myImg4 {}
+#myImg4:hover {opacity: 0.1;}
+#myImg5 {}
+#myImg5:hover {opacity: 0.1;}
+#myImg6 {}
+#myImg6:hover {opacity: 0.1;}
 
 .cropimg {
 
@@ -271,8 +272,10 @@ all:unset
 
             <div class="fixed">
             <p><center> <h1 >  
-            <img id="myImg" src="https://user-images.githubusercontent.com/52555584/91612738-e5b98a00-e932-11ea-8794-23c6f4288666.jpg"   style="height: 1%; width:10%;max-width:45px">  <img id="myImg1" src="https://user-images.githubusercontent.com/52555584/91607958-8e62ec00-e929-11ea-8b5d-18b8fa263af9.jpg"  style="height: 5%; width:10%;max-width:40px"> 
-            &nbsp; &nbsp;  Nature's Prophet  &nbsp; &nbsp;   <img id="myImg2" src="https://user-images.githubusercontent.com/52555584/91607991-97ec5400-e929-11ea-90bd-23b4109037f9.jpg"  style="height: 5%; width:10%;max-width:44px">  <img id="myImg3" src="https://user-images.githubusercontent.com/52555584/91608011-9fabf880-e929-11ea-9e47-4b60f2f4d031.jpg"  style="height: 5%; width:10%;max-width:40px">  </h1>    </center>
+            <img id="myImg" src="https://user-images.githubusercontent.com/52555584/91612738-e5b98a00-e932-11ea-8794-23c6f4288666.jpg"   style="height: 1%; width:10%;max-width:45px">  <img id="myImg1" src="https://user-images.githubusercontent.com/52555584/91607958-8e62ec00-e929-11ea-8b5d-18b8fa263af9.jpg"  style="height: 5%; width:10%;max-width:40px"> <img id="myImg2" src="https://user-images.githubusercontent.com/52555584/91607991-97ec5400-e929-11ea-90bd-23b4109037f9.jpg"  style="height: 5%; width:10%;max-width:44px"> 
+            &nbsp; &nbsp;  Nature's  <img id="myImg3" src="https://user-images.githubusercontent.com/52555584/91608011-9fabf880-e929-11ea-9e47-4b60f2f4d031.jpg"  style="height: 5%; width:10%;max-width:40px">   Prophet  &nbsp; &nbsp;   <img id="myImg4" src="https://user-images.githubusercontent.com/52555584/91617085-0c2ff300-e93c-11ea-9c2f-461c6539a6e2.jpg"  style="height: 5%; width:10%;max-width:33px">  
+            <img id="myImg5" src="https://user-images.githubusercontent.com/52555584/91616863-772cfa00-e93b-11ea-88e4-d65cc7ff0553.jpg"  style="height: 5%; width:10%;max-width:30px"> 
+            <img id="myImg6" src="https://user-images.githubusercontent.com/52555584/91616870-798f5400-e93b-11ea-8b05-e4efc2401b80.jpg"  style="height: 5%; width:10%;max-width:41px"> </h1>    </center>
 		  
  
 		   leeches in sync, leeches in bleach 
@@ -394,6 +397,32 @@ img.onclick = function(){
 }
 
 
+var img = document.getElementById("myImg4");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+var img = document.getElementById("myImg5");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+var img = document.getElementById("myImg6");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
 
 
 // Get the <span> element that closes the modal
