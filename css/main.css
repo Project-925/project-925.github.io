@@ -59,7 +59,7 @@ nav ul li, footer ul li {
 
 
 
-/* ——— RESPONSIVE FALLBACK @ <1230px ——— */Add commentMore actions
+/* ——— RESPONSIVE FALLBACK @ <1230px ——— */
 @media (max-width: 1229px) {
   /* 1) let .fixed flow normally */
 div.fixed {
@@ -108,7 +108,7 @@ div.fixed {
     transform: translateX(-50%);
   }
 
-}Add commentMore actions
+}
 
 
 
