@@ -2,6 +2,62 @@
 	<html>
 	<style>
 
+
+/* ——— RESPONSIVE FALLBACK @ <1230px ——— */
+@media (max-width: 1229px) {
+  /* 1) let .fixed flow normally */
+div.fixed {
+  margin: 0 auto;
+  text-align: center;
+  position: fixed;
+  font-size: 25px;
+  bottom: 1300px;           /* lock it 310px down from the top */
+  left: 50%;            /* anchor it at the horizontal center */
+  transform: translateX(-50%);
+  /* remove any translateY so its vertical spot never shifts */
+}
+
+
+  /* 2) collapse all nav buttons to just their “9.3”, “2.1”, etc. */
+  a {
+    display: inline-block;
+    font-size: 30px;
+    width: 5ch;
+    height: 2ch;
+    overflow: hidden;
+  }
+
+  /* 3) 9.2 and 9.1 align to the left */
+  a[href^="/9.2"],
+  a[href^="/9.1"] {
+    position: fixed;
+    left: 1em;
+  }
+
+  /* 4) 2.1, 2.2 and all the 5.x buttons align to the right */
+  a[href^="/2.1"],
+  a[href^="/2.2"],
+  a[href^="/5.1"],
+  a[href^="/5.2"],
+  a[href^="/5.3"],
+  a[href^="/5.4"],
+  a[href^="/5.5"] {
+    position: fixed;
+    right: 1em;
+  }
+
+  /* 5) Make the “home” link sit at the very bottom, centered */
+  a[href="https://project-925.github.io/"] {
+    position: fixed;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
+
+
+
 a {
   background-color: #e2efd1;
   border-style: solid;
@@ -39,7 +95,14 @@ div.fixed {
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
-
+/* Media query override for smaller screens */
+@media (max-width: 1229px) {
+  div.fixed {
+    top: 20%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+  }
+}
 
        
 	</style>
@@ -125,7 +188,7 @@ div.fixed {
                 	</p>
                     
                     <br>
-	        		<p align = "center">
+	        		<p align = "center"> 
                     <a href="https://project-925.github.io">home</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                 	</p>
                     
@@ -133,7 +196,8 @@ div.fixed {
                 
              
 
-			<div class="fixed"><a href="/9.1" class="inheritall">
+			<div class="fixed">
+        <a href="/9.1" class="inheritall">
             <img src="https://user-images.githubusercontent.com/52555584/87888597-9b172a80-c9e2-11ea-9a13-cb0248ea7bef.jpg"  width="337" height="433" ></div></a>
 
             
